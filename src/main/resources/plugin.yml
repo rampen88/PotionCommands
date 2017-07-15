@@ -1,0 +1,12 @@
+name: PotionCommands
+version: ${project.version}
+author: rampen88
+main: me.rampen88.potioncommands.PotionCommands
+commands:
+  pcommand:
+    description: reloads the configuration.
+    aliases: [pcommands, potioncommand, potioncommands]
+permissions:
+   potion.commands.reload:
+     description: lets you do /pcommand, which reloads the configuration.
+     default: op

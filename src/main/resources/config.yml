@@ -1,0 +1,58 @@
+# If player does not have permission for the command upon leaving the server, remove the effect.
+CheckPermOnExit: true
+
+# Minimum duration left of the potion effect for it to clear when relevant, in ticks.
+# So it does not clear effects from potions and things like that.
+MinDurationForClear: 12000
+
+Commands:
+  # Name here does not matter as long as its unique.
+  Nightvision:
+    # The potion effect type. Full list: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionEffectType.html
+    Type: NIGHT_VISION
+
+    # The level of the potion effect is 1 + Amplifier. Defaults to 0 if removed.
+    Amplifier: 0
+
+    # The permission required for this effect. Defaults to 'potion.command.default' if removed.
+    Permission: 'potion.command.nightvision'
+
+    # permission message to send if player does not have permission for this effect.
+    NoPermissionMessage: '&4You do not have permission to do that.'
+
+    # If the effect should always be cleared upon leaving the server. Defaults to false if removed.
+    AlwaysClearOnExit: false
+
+    # The sound that plays when toggled. Will play no sound if removed. Full list: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html
+    ToggleSound:
+      Sound: BLOCK_NOTE_PLING
+      # Both volume and pitch will default to 1 if removed.
+      Volume: 1
+      Pitch: 1
+
+    # Commands which run when enabling the effect. use %player% for the player name.
+    CommandsOnEnable:
+      - 'say enable test'
+
+    # Commands which run when disabling the effect. use %player% for the player name.
+    CommandsOnDisable:
+      - 'say disable test'
+
+    # The commands to activate this effect.
+    Commands:
+      - 'nv'
+      - 'nightvision'
+  FireRes:
+    Type: FIRE_RESISTANCE
+    Permission: 'potion.command.fireres'
+    ToggleSound:
+      Sound: BLOCK_NOTE_PLING
+    Commands:
+      - 'fr'
+      - 'fireres'
+      - 'fireresistance'
+
+
+Messages:
+  NoPermission: '&4You do not have permission to do that.'
+  Reload: '&aAttempted to reload the plugin. Check console for potential errors.'
