@@ -2,6 +2,7 @@ name: PotionCommands
 version: ${project.version}
 author: rampen88
 main: me.rampen88.potioncommands.PotionCommands
+api-version: 1.15
 commands:
   pcommand:
     description: reloads the configuration.
